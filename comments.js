@@ -39,7 +39,7 @@ app.post('/api/comment/create', async (req, res) => {
 	// send a POST request with data using fetch to the moderation service
 
 	try {
-		const { data } = await axios.post('http://localhost:3004/', {
+		const { data } = await axios.post('http://142.93.55.175/', {
 			content
 		})
 		status = data.status
