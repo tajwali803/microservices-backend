@@ -10,6 +10,10 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
 
+app.get('/', (req, res) => {
+	res.json({ title: 'working' })
+})
+
 app.get('/api/comment/:postId', async (req, res) => {
 	const comments = await Comment.find({ post_id: req.params.postId })
 	res.json(comments)
