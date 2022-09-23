@@ -23,6 +23,10 @@ app.post('/api/login', async (req, res) => {
 	})
 })
 
+app.get('/', (req, res) => {
+	res.json({ title: 'working' })
+})
+
 app.post('/api/signup', async (req, res) => {
 	const { name, email, password } = req.body
 
@@ -50,7 +54,7 @@ app.post('/api/signup', async (req, res) => {
 
 /* ---------------- variables for port and connection string ---------------- */
 const port = process.env.PORT || 3001
-const connection_url = 'mongodb://127.0.0.1:27017/Users'
+const connection_url = 'mongodb+srv://tajwali:Bismillah1@cluster0.yxt59qn.mongodb.net/?retryWrites=true&w=majority'
 
 /* ---------------- mongoose connection ---------------- */
 connect(connection_url)
